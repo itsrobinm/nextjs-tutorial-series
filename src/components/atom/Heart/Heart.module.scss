@@ -1,0 +1,25 @@
+.container {
+  position: relative;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  opacity: 0.8;
+}
+
+.heart {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.active {
+  opacity: 1;
+}
+
+.inActive {
+  opacity: 0;
+}
+
+.solidHeart {
+  transition: opacity 0.125s linear;
+}
