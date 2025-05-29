@@ -37,3 +37,5 @@ AUTH_SECRET=<YOUR AUTH SECRET>
 
 The auth secret can be generated with the mac command: `openssl rand -base64 32`
 or visit [https://generate-secret.vercel.app/32](https://generate-secret.vercel.app/32) if you're on Windows.
+
+the Database has been seeded with some intial items and with the user **johndoe** - you can login at [http://localhost:3000/login](http://localhost:3000/login) with the password **pass**
