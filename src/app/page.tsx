@@ -2,8 +2,11 @@ import AddProduct from "@/components/AddProduct";
 import { products } from "@/globals/globals";
 import styles from "@/styles/home.module.scss";
 import { addProduct } from "./actions";
+import { auth } from "@/auth";
 
-export default function Home() {
+export default async function Home() {
+
+//let thing = await auth()
   return (
     <div className={styles.container}>
       <header>

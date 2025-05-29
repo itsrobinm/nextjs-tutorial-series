@@ -7,3 +7,5 @@ export const addProduct = async (product: string) => {
     products.push({ name: product });
     revalidatePath("/");
 };
+
+//export const toggleItemLike = async (itemId: string) => {

@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo-tutorial
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongo-data:/data/db
+      - ./populateDB.js:/docker-entrypoint-initdb.d/populateDB.js
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+
+  mongo-express:
+    image: mongo-express:latest
+    container_name: mongo-express-tutorial
+    ports:
+      - "9093:8081"
+    depends_on:
+      - mongo
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: example
+      ME_CONFIG_MONGODB_SERVER: mongo
+
+volumes:
+  mongo-data:

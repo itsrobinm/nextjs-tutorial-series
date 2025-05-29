@@ -1,0 +1,31 @@
+.itemGrid {
+  display: inline-grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  gap: 1rem;
+  max-width: 60rem;
+  padding: 1rem;
+  place-items: center;
+}
+
+@media (max-width: 916px) {
+  .itemGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 691px) {
+  .itemGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 467px) {
+  .itemGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gridWrapper {
+  text-align: center;
+}
